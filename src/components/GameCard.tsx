@@ -10,7 +10,7 @@ interface GameCartProps {
 
 function GameCard({ game }: GameCartProps) {
   return (
-    <Card borderRadius={10} overflow={'hidden'}>
+    <Card width="300px" borderRadius={10} overflow={'hidden'}>
       <Image src={getCroppesImageUrl(game.background_image)} />
       <CardBody>
         <Heading fontSize={'2xl'}>{game.name}</Heading>
