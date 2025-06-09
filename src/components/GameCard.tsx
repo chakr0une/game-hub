@@ -3,6 +3,7 @@ import { Game } from '../hooks/useGames';
 import PlatformIconList from './PlatformIconList';
 import CriticScor from './CriticScor';
 import getCroppesImageUrl from '../services/image-url';
+import Emoji from './Emoji';
 
 interface GameCartProps {
   game: Game;
@@ -19,7 +20,10 @@ function GameCard({ game }: GameCartProps) {
           />
           <CriticScor score={game.metacritic} />
         </HStack>
-        <Heading fontSize={'2xl'}>{game.name}</Heading>
+        <Heading fontSize={'2xl'}>
+          {game.name}
+          <Emoji rating={game.rating_top} />
+        </Heading>
       </CardBody>
     </Card>
   );
